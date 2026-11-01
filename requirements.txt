@@ -1,0 +1,25 @@
+# VisionAssist — works on Python 3.9 → 3.14 (Windows)
+#
+#   python -m pip install -r requirements.txt
+#   python main.py
+#
+# Every line resolves to a wheel that installs on Python 3.14:
+#   mediapipe              py3-none-win_amd64  (pure C DLL + ctypes)
+#   opencv-contrib-python  cp37-abi3-win_amd64 (stable ABI)
+#   pycaw / comtypes       py3-none-any        (pure Python)
+#   numpy / Pillow         cp314
+#
+# mediapipe must be >= 1.0.0: the 0.10.x releases only shipped cp38-cp312
+# wheels and will not install on Python 3.13 / 3.14.
+
+opencv-contrib-python>=4.8
+mediapipe>=1.0.0
+numpy>=1.24
+Pillow>=9.0
+pytest>=7.0
+
+# System control. Media keys and window detection use only ctypes (no
+# package needed); pycaw adds exact Windows master-volume read/write so the
+# volume gestures can move it in precise steps.
+pycaw>=20240207
+comtypes>=1.4
