@@ -1,0 +1,94 @@
+{
+  "schema_version": 1,
+  "registered_apps": [
+    {
+      "name": "Notepad",
+      "type": "app",
+      "path_or_url": "notepad.exe",
+      "launch_gesture": "THUMBS_UP",
+      "enabled": true
+    },
+    {
+      "name": "Google",
+      "type": "website",
+      "path_or_url": "https://www.google.com",
+      "launch_gesture": "PEACE",
+      "enabled": true
+    }
+  ],
+  "profiles": {
+    "demo": {
+      "description": "Original demo actions (no real PC actions)",
+      "gesture_actions": {
+        "OPEN_PALM": "demo:Toggle Mode",
+        "FIST": "demo:Pause / Resume",
+        "THUMBS_UP": "demo:Next Slide",
+        "POINTING": "demo:Prev Slide",
+        "PEACE": "demo:Select / Deselect"
+      }
+    },
+    "media": {
+      "description": "System media keys — controls Spotify, VLC, browser, …",
+      "gesture_actions": {
+        "OPEN_PALM": "media:playpause",
+        "FIST": "media:stop",
+        "THUMBS_UP": "media:nexttrack",
+        "POINTING": "media:prevtrack",
+        "PEACE": "media:volumemute",
+        "THREE_FINGERS": "media:volumeup",
+        "FOUR_FINGERS": "media:volumedown"
+      }
+    },
+    "presentation": {
+      "description": "Slide presentation controls",
+      "gesture_actions": {
+        "OPEN_PALM": "media:f5",
+        "FIST": "media:escape",
+        "THUMBS_UP": "media:right",
+        "POINTING": "media:left",
+        "PEACE": "media:b",
+        "THUMBS_DOWN": "media:w",
+        "HORNS": "media:home"
+      }
+    },
+    "window": {
+      "description": "Window management — maximise, snap, switch, screenshot",
+      "gesture_actions": {
+        "OPEN_PALM": "media:winmax",
+        "FIST": "media:winmin",
+        "THUMBS_UP": "media:winsnapperight",
+        "POINTING": "media:winsnapleft",
+        "PEACE": "media:showdesktop",
+        "HORNS": "media:screenshot",
+        "CALL_ME": "media:switchwin",
+        "THREE_FINGERS": "media:volumeup",
+        "FOUR_FINGERS": "media:volumedown"
+      }
+    },
+    "launch": {
+      "description": "Launch Mode — gestures open apps/websites",
+      "gesture_actions": {}
+    }
+  },
+  "active_profile": "media",
+  "auto_profile": {
+    "powerpnt.exe": "presentation",
+    "soffice.bin": "presentation",
+    "evince.exe": "presentation",
+    "spotify.exe": "media",
+    "vlc.exe": "media",
+    "wmplayer.exe": "media",
+    "firefox.exe": "media",
+    "msedge.exe": "media",
+    "chrome.exe": "media",
+    "explorer.exe": "window",
+    "code.exe": "window"
+  },
+  "settings": {
+    "always_on_top": false,
+    "start_minimized": false,
+    "camera_on_minimize": true,
+    "auto_profile_enabled": true,
+    "launch_mode_gesture": null
+  }
+}
